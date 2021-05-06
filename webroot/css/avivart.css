@@ -1,0 +1,113 @@
+:root{
+    --white: #fff;
+    --black: #000;
+    --yellow: #ffeb3b;
+}
+
+body.login-body {
+    background-color: #e1f5fe;
+    position: relative;
+}
+
+body.login-body .section-left {
+    margin-top: 25vh;
+}
+
+body.login-body .section-right {
+    margin-top: 25vh;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+body.login-body .section-right h6 {
+    font-weight: bold;
+    color: #7cb342;
+}
+
+body.login-body .section-right label {
+    color: #222222;
+}
+
+body.login-body .section-right p {
+    color: #000000;
+}
+
+footer {
+    background-color: var(--black);
+    padding: 15px;
+    font-size: 12px;
+    color: var(--white);
+}
+
+#actions-sidebar {
+    transition: 0.5s;
+}
+
+#actions-sidebar li {
+    transition: 0.3s;
+}
+
+.show-hide-side-nav {
+    color: var(--yellow);
+    font-size: 12px;
+    padding-left: 15px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.show-hide-search-block {
+    cursor: pointer;
+    text-align: right;
+    margin: 0;
+}
+
+.side-nav-logo {
+    margin-top: 15px;
+}
+
+.side-nav-logo img {
+    border-radius: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.columns.content {
+    transition: 0.5s;
+}
+
+@media screen and (max-width:800px) {
+    table {
+        display: flex;
+    }
+    thead,
+    tfoot {
+        display: none;
+    }
+    tbody {
+        flex: 1;
+    }
+    tr {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    th,
+    td {}
+
+    #collapsed-sidebar, .side-nav, .search-block {
+        display: none;
+    }
+}
+
+@media screen and (max-width:461px) {}
+
+@media (max-width: 767px) {
+    body.login-body .section-left {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {}
