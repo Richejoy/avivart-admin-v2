@@ -21,6 +21,7 @@ class ContactsController extends AppController
     {
         $this->paginate = [
             'contain' => ['ContactTopics'],
+            'order' => ['Contacts.id' => 'ASC']
         ];
         $contacts = $this->paginate($this->Contacts);
 

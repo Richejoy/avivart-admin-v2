@@ -21,7 +21,6 @@ class PaymentsFixture extends TestFixture
         'payment_reference' => ['type' => 'string', 'length' => 50, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'payment_method' => ['type' => 'string', 'length' => 20, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'phone_number' => ['type' => 'string', 'length' => 20, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'amount' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'identifier' => ['type' => 'string', 'length' => 60, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'order_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
@@ -50,15 +49,14 @@ class PaymentsFixture extends TestFixture
             [
                 'id' => 1,
                 'tx_reference' => 'Lorem ipsum dolor sit amet',
-                'tx_datetime' => '2021-05-05 14:56:11',
+                'tx_datetime' => '2021-05-19 13:20:21',
                 'payment_reference' => 'Lorem ipsum dolor sit amet',
                 'payment_method' => 'Lorem ipsum dolor ',
                 'phone_number' => 'Lorem ipsum dolor ',
-                'amount' => 1,
                 'identifier' => 'Lorem ipsum dolor sit amet',
                 'description' => 'Lorem ipsum dolor sit amet',
                 'order_id' => 1,
-                'created' => 1620226571,
+                'created' => 1621430421,
             ],
         ];
         parent::init();

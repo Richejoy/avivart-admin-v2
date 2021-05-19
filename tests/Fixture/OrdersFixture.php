@@ -23,6 +23,7 @@ class OrdersFixture extends TestFixture
         'payment_mode_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'coupon_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'order_state_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'amount' => ['type' => 'float', 'length' => null, 'precision' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => ''],
         'created' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'current_timestamp()', 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'timestamp', 'length' => null, 'null' => false, 'default' => 'current_timestamp()', 'comment' => '', 'precision' => null],
         '_indexes' => [
@@ -55,14 +56,15 @@ class OrdersFixture extends TestFixture
             [
                 'id' => 1,
                 'delivery_address' => 'Lorem ipsum dolor sit amet',
-                'delivery_date' => '2021-05-05',
+                'delivery_date' => '2021-05-19',
                 'paid' => 1,
                 'user_id' => 1,
                 'payment_mode_id' => 1,
                 'coupon_id' => 1,
                 'order_state_id' => 1,
-                'created' => 1620226577,
-                'modified' => 1620226577,
+                'amount' => 1,
+                'created' => 1621430412,
+                'modified' => 1621430412,
             ],
         ];
         parent::init();

@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\ProductsUser $productsUser
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Products User'), ['action' => 'edit', $productsUser->product_id]) ?> </li>
@@ -17,7 +17,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="productsUsers view large-9 medium-8 columns content">
+<div class="productsUsers view large-10 medium-10 columns content">
     <h3><?= h($productsUser->product_id) ?></h3>
     <table class="vertical-table">
         <tr>

@@ -53,6 +53,10 @@
             <td><?= $this->Number->format($order->id) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Amount') ?></th>
+            <td><?= $this->Number->format($order->amount) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Delivery Date') ?></th>
             <td><?= h($order->delivery_date) ?></td>
         </tr>
@@ -129,7 +133,6 @@
                 <th scope="col"><?= __('Payment Reference') ?></th>
                 <th scope="col"><?= __('Payment Method') ?></th>
                 <th scope="col"><?= __('Phone Number') ?></th>
-                <th scope="col"><?= __('Amount') ?></th>
                 <th scope="col"><?= __('Identifier') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Order Id') ?></th>
@@ -144,7 +147,6 @@
                 <td><?= h($payments->payment_reference) ?></td>
                 <td><?= h($payments->payment_method) ?></td>
                 <td><?= h($payments->phone_number) ?></td>
-                <td><?= h($payments->amount) ?></td>
                 <td><?= h($payments->identifier) ?></td>
                 <td><?= h($payments->description) ?></td>
                 <td><?= h($payments->order_id) ?></td>

@@ -21,6 +21,7 @@ class UsersController extends AppController
     {
         $this->paginate = [
             'contain' => ['Images', 'Countries', 'Civilities', 'UserTypes', 'Roles'],
+            'order' => ['Users.id' => 'ASC']
         ];
         $users = $this->paginate($this->Users);
 

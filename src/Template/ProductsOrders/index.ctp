@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\ProductsOrder[]|\Cake\Collection\CollectionInterface $productsOrders
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Products Order'), ['action' => 'add']) ?></li>
@@ -14,7 +14,7 @@
         <li><?= $this->Html->link(__('New Order'), ['controller' => 'Orders', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="productsOrders index large-9 medium-8 columns content">
+<div class="productsOrders index large-10 medium-10 columns content">
     <h3><?= __('Products Orders') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

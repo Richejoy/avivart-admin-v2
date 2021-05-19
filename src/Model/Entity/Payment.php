@@ -12,7 +12,6 @@ use Cake\ORM\Entity;
  * @property string $payment_reference
  * @property string $payment_method
  * @property string $phone_number
- * @property float $amount
  * @property string $identifier
  * @property string $description
  * @property int $order_id
@@ -37,7 +36,6 @@ class Payment extends Entity
         'payment_reference' => true,
         'payment_method' => true,
         'phone_number' => true,
-        'amount' => true,
         'identifier' => true,
         'description' => true,
         'order_id' => true,

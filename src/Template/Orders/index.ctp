@@ -35,6 +35,7 @@
                 <th scope="col"><?= $this->Paginator->sort('payment_mode_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('coupon_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('order_state_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('amount') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -51,6 +52,7 @@
                 <td><?= $order->has('payment_mode') ? $this->Html->link($order->payment_mode->name, ['controller' => 'PaymentModes', 'action' => 'view', $order->payment_mode->id]) : '' ?></td>
                 <td><?= $order->has('coupon') ? $this->Html->link($order->coupon->name, ['controller' => 'Coupons', 'action' => 'view', $order->coupon->id]) : '' ?></td>
                 <td><?= $order->has('order_state') ? $this->Html->link($order->order_state->name, ['controller' => 'OrderStates', 'action' => 'view', $order->order_state->id]) : '' ?></td>
+                <td><?= $this->Number->format($order->amount) ?></td>
                 <td><?= h($order->created) ?></td>
                 <td><?= h($order->modified) ?></td>
                 <td class="actions">

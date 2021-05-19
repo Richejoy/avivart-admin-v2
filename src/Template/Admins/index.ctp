@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Admin[]|\Cake\Collection\CollectionInterface $admins
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Admin'), ['action' => 'add']) ?></li>
@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="admins index large-9 medium-8 columns content">
+<div class="admins index large-10 medium-10 columns content">
     <h3><?= __('Admins') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

@@ -34,6 +34,7 @@
             echo $this->Form->control('payment_mode_id', ['options' => $paymentModes]);
             echo $this->Form->control('coupon_id', ['options' => $coupons, 'empty' => true]);
             echo $this->Form->control('order_state_id', ['options' => $orderStates]);
+            echo $this->Form->control('amount');
             echo $this->Form->control('products._ids', ['options' => $products]);
         ?>
     </fieldset>

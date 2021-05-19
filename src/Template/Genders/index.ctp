@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Gender[]|\Cake\Collection\CollectionInterface $genders
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Gender'), ['action' => 'add']) ?></li>
@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New Civility'), ['controller' => 'Civilities', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="genders index large-9 medium-8 columns content">
+<div class="genders index large-10 medium-10 columns content">
     <h3><?= __('Genders') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

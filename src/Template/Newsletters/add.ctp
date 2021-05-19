@@ -4,13 +4,13 @@
  * @var \App\Model\Entity\Newsletter $newsletter
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Newsletters'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
-<div class="newsletters form large-9 medium-8 columns content">
+<div class="newsletters form large-10 medium-10 columns content">
     <?= $this->Form->create($newsletter) ?>
     <fieldset>
         <legend><?= __('Add Newsletter') ?></legend>

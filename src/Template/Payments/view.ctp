@@ -51,10 +51,6 @@
             <td><?= $this->Number->format($payment->id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Amount') ?></th>
-            <td><?= $this->Number->format($payment->amount) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Tx Datetime') ?></th>
             <td><?= h($payment->tx_datetime) ?></td>
         </tr>

@@ -21,6 +21,7 @@ class ProductRaysController extends AppController
     {
         $this->paginate = [
             'contain' => ['Images'],
+            'order' => ['ProductRays.id' => 'ASC']
         ];
         $productRays = $this->paginate($this->ProductRays);
 

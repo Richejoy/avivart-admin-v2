@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Newsletter $newsletter
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Newsletter'), ['action' => 'edit', $newsletter->id]) ?> </li>
@@ -13,7 +13,7 @@
         <li><?= $this->Html->link(__('New Newsletter'), ['action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="newsletters view large-9 medium-8 columns content">
+<div class="newsletters view large-10 medium-10 columns content">
     <h3><?= h($newsletter->id) ?></h3>
     <table class="vertical-table">
         <tr>

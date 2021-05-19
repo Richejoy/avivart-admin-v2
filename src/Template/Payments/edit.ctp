@@ -28,7 +28,6 @@
             echo $this->Form->control('payment_reference');
             echo $this->Form->control('payment_method');
             echo $this->Form->control('phone_number');
-            echo $this->Form->control('amount');
             echo $this->Form->control('identifier');
             echo $this->Form->control('description');
             echo $this->Form->control('order_id', ['options' => $orders]);

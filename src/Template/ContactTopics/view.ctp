@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\ContactTopic $contactTopic
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Contact Topic'), ['action' => 'edit', $contactTopic->id]) ?> </li>
@@ -15,7 +15,7 @@
         <li><?= $this->Html->link(__('New Contact'), ['controller' => 'Contacts', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="contactTopics view large-9 medium-8 columns content">
+<div class="contactTopics view large-10 medium-10 columns content">
     <h3><?= h($contactTopic->name) ?></h3>
     <table class="vertical-table">
         <tr>

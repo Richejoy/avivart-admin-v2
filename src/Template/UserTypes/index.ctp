@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\UserType[]|\Cake\Collection\CollectionInterface $userTypes
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New User Type'), ['action' => 'add']) ?></li>
@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="userTypes index large-9 medium-8 columns content">
+<div class="userTypes index large-10 medium-10 columns content">
     <h3><?= __('User Types') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

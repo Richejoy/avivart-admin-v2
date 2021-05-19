@@ -21,6 +21,7 @@ class CivilitiesController extends AppController
     {
         $this->paginate = [
             'contain' => ['Genders'],
+            'order' => ['Civilities.id' => 'ASC']
         ];
         $civilities = $this->paginate($this->Civilities);
 

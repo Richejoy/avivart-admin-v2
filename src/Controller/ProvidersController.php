@@ -21,6 +21,7 @@ class ProvidersController extends AppController
     {
         $this->paginate = [
             'contain' => ['Users'],
+            'order' => ['Providers.id' => 'ASC']
         ];
         $providers = $this->paginate($this->Providers);
 

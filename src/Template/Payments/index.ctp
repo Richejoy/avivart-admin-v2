@@ -23,7 +23,6 @@
                 <th scope="col"><?= $this->Paginator->sort('payment_reference') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('payment_method') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone_number') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('amount') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('identifier') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('description') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('order_id') ?></th>
@@ -40,7 +39,6 @@
                 <td><?= h($payment->payment_reference) ?></td>
                 <td><?= h($payment->payment_method) ?></td>
                 <td><?= h($payment->phone_number) ?></td>
-                <td><?= $this->Number->format($payment->amount) ?></td>
                 <td><?= h($payment->identifier) ?></td>
                 <td><?= h($payment->description) ?></td>
                 <td><?= $payment->has('order') ? $this->Html->link($payment->order->id, ['controller' => 'Orders', 'action' => 'view', $payment->order->id]) : '' ?></td>

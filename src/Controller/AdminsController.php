@@ -21,6 +21,7 @@ class AdminsController extends AppController
     {
         $this->paginate = [
             'contain' => ['Users'],
+            'order' => ['Admins.id' => 'ASC']
         ];
         $admins = $this->paginate($this->Admins);
 

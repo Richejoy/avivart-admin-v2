@@ -14,6 +14,7 @@ use Cake\ORM\Entity;
  * @property int $payment_mode_id
  * @property int|null $coupon_id
  * @property int $order_state_id
+ * @property float $amount
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -43,6 +44,7 @@ class Order extends Entity
         'payment_mode_id' => true,
         'coupon_id' => true,
         'order_state_id' => true,
+        'amount' => true,
         'created' => true,
         'modified' => true,
         'user' => true,

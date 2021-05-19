@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Image $image
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Images'), ['action' => 'index']) ?></li>
@@ -20,7 +20,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="images form large-9 medium-8 columns content">
+<div class="images form large-10 medium-10 columns content">
     <?= $this->Form->create($image) ?>
     <fieldset>
         <legend><?= __('Add Image') ?></legend>

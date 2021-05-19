@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Country[]|\Cake\Collection\CollectionInterface $countries
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Country'), ['action' => 'add']) ?></li>
@@ -12,7 +12,7 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="countries index large-9 medium-8 columns content">
+<div class="countries index large-10 medium-10 columns content">
     <h3><?= __('Countries') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

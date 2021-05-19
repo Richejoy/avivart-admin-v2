@@ -97,6 +97,11 @@ class OrdersTable extends Table
             ->boolean('paid')
             ->notEmptyString('paid');
 
+        $validator
+            ->numeric('amount')
+            ->requirePresence('amount', 'create')
+            ->notEmptyString('amount');
+
         return $validator;
     }
 

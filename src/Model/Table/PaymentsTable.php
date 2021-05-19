@@ -88,11 +88,6 @@ class PaymentsTable extends Table
             ->notEmptyString('phone_number');
 
         $validator
-            ->numeric('amount')
-            ->requirePresence('amount', 'create')
-            ->notEmptyString('amount');
-
-        $validator
             ->scalar('identifier')
             ->maxLength('identifier', 60)
             ->requirePresence('identifier', 'create')
