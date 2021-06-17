@@ -21,14 +21,5 @@
     </ul>
 </nav>
 <div class="productsOrders form large-10 medium-10 columns content">
-    <?= $this->Form->create($productsOrder) ?>
-    <fieldset>
-        <legend><?= __('Edit Products Order') ?></legend>
-        <?php
-            echo $this->Form->control('id');
-            echo $this->Form->control('quantity');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+    <h5><?= __('Unavailable') ?></h5>
 </div>

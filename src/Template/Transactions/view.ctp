@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('User') ?></th>
-            <td><?= $transaction->has('user') ? $this->Html->link($transaction->user->id, ['controller' => 'Users', 'action' => 'view', $transaction->user->id]) : '' ?></td>
+            <td><?= $transaction->has('user') ? $this->Html->link($transaction->user->full_name, ['controller' => 'Users', 'action' => 'view', $transaction->user->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

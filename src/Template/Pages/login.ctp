@@ -13,7 +13,7 @@
 			<article class="columns large-4 section-right">
 
 				<p class="text-center">
-					<img src="http://avivart.net/v2/public/img/logo.png" alt="Logo">
+					<img src="http://avivart.net/public/img/logo.png" alt="Logo">
 				</p>
 
 				<h6 class="text-center"><?= __('Login with your credentials.') ?></h6>

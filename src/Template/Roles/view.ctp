@@ -42,22 +42,6 @@
                 <th scope="col"><?= __('Email') ?></th>
                 <th scope="col"><?= __('Phone') ?></th>
                 <th scope="col"><?= __('Username') ?></th>
-                <th scope="col"><?= __('Password') ?></th>
-                <th scope="col"><?= __('Activated') ?></th>
-                <th scope="col"><?= __('Can Login') ?></th>
-                <th scope="col"><?= __('Last Login') ?></th>
-                <th scope="col"><?= __('Nb Login') ?></th>
-                <th scope="col"><?= __('City') ?></th>
-                <th scope="col"><?= __('Address') ?></th>
-                <th scope="col"><?= __('Token') ?></th>
-                <th scope="col"><?= __('Tfa Enabled') ?></th>
-                <th scope="col"><?= __('Tfa Code') ?></th>
-                <th scope="col"><?= __('Removed') ?></th>
-                <th scope="col"><?= __('Image Id') ?></th>
-                <th scope="col"><?= __('Country Id') ?></th>
-                <th scope="col"><?= __('Civility Id') ?></th>
-                <th scope="col"><?= __('User Type Id') ?></th>
-                <th scope="col"><?= __('Role Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($role->users as $users): ?>
@@ -68,22 +52,6 @@
                 <td><?= h($users->email) ?></td>
                 <td><?= h($users->phone) ?></td>
                 <td><?= h($users->username) ?></td>
-                <td><?= h($users->password) ?></td>
-                <td><?= h($users->activated) ?></td>
-                <td><?= h($users->can_login) ?></td>
-                <td><?= h($users->last_login) ?></td>
-                <td><?= h($users->nb_login) ?></td>
-                <td><?= h($users->city) ?></td>
-                <td><?= h($users->address) ?></td>
-                <td><?= h($users->token) ?></td>
-                <td><?= h($users->tfa_enabled) ?></td>
-                <td><?= h($users->tfa_code) ?></td>
-                <td><?= h($users->removed) ?></td>
-                <td><?= h($users->image_id) ?></td>
-                <td><?= h($users->country_id) ?></td>
-                <td><?= h($users->civility_id) ?></td>
-                <td><?= h($users->user_type_id) ?></td>
-                <td><?= h($users->role_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Users', 'action' => 'view', $users->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Users', 'action' => 'edit', $users->id]) ?>

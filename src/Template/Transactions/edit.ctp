@@ -21,15 +21,5 @@
     </ul>
 </nav>
 <div class="transactions form large-10 medium-10 columns content">
-    <?= $this->Form->create($transaction) ?>
-    <fieldset>
-        <legend><?= __('Edit Transaction') ?></legend>
-        <?php
-            echo $this->Form->control('activity');
-            echo $this->Form->control('transaction_type_id', ['options' => $transactionTypes]);
-            echo $this->Form->control('user_id', ['options' => $users]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+    <h5><?= __('Unavailable') ?></h5>
 </div>

@@ -35,8 +35,6 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Activity') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Transaction Type Id') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($transactionType->transactions as $transactions): ?>
@@ -44,8 +42,6 @@
                 <td><?= h($transactions->id) ?></td>
                 <td><?= h($transactions->activity) ?></td>
                 <td><?= h($transactions->created) ?></td>
-                <td><?= h($transactions->transaction_type_id) ?></td>
-                <td><?= h($transactions->user_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Transactions', 'action' => 'view', $transactions->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Transactions', 'action' => 'edit', $transactions->id]) ?>

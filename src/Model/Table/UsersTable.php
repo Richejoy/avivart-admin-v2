@@ -16,7 +16,6 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\RolesTable&\Cake\ORM\Association\BelongsTo $Roles
  * @property \App\Model\Table\AdminsTable&\Cake\ORM\Association\HasMany $Admins
  * @property \App\Model\Table\OrdersTable&\Cake\ORM\Association\HasMany $Orders
- * @property &\Cake\ORM\Association\HasMany $Payments
  * @property \App\Model\Table\ProductsTable&\Cake\ORM\Association\HasMany $Products
  * @property \App\Model\Table\TransactionsTable&\Cake\ORM\Association\HasMany $Transactions
  * @property \App\Model\Table\ProductsTable&\Cake\ORM\Association\BelongsToMany $Products
@@ -43,7 +42,7 @@ class UsersTable extends Table
         parent::initialize($config);
 
         $this->setTable('users');
-        $this->setDisplayField('id');
+        $this->setDisplayField('full_name');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Images', [
@@ -70,9 +69,6 @@ class UsersTable extends Table
             'foreignKey' => 'user_id',
         ]);
         $this->hasMany('Orders', [
-            'foreignKey' => 'user_id',
-        ]);
-        $this->hasMany('Payments', [
             'foreignKey' => 'user_id',
         ]);
         $this->hasMany('Products', [
@@ -167,6 +163,11 @@ class UsersTable extends Table
             ->scalar('token')
             ->maxLength('token', 255)
             ->allowEmptyString('token');
+
+        $validator
+            ->scalar('remember_token')
+            ->maxLength('remember_token', 100)
+            ->allowEmptyString('remember_token');
 
         $validator
             ->boolean('tfa_enabled')

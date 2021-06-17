@@ -21,6 +21,7 @@ use Cake\Auth\DefaultPasswordHasher;
  * @property string|null $city
  * @property string|null $address
  * @property string|null $token
+ * @property string|null $remember_token
  * @property bool $tfa_enabled
  * @property string|null $tfa_code
  * @property bool $removed
@@ -37,9 +38,7 @@ use Cake\Auth\DefaultPasswordHasher;
  * @property \App\Model\Entity\Role $role
  * @property \App\Model\Entity\Admin[] $admins
  * @property \App\Model\Entity\Order[] $orders
- * @property \App\Model\Entity\Payhome[] $payhomes
  * @property \App\Model\Entity\Product[] $products
- * @property \App\Model\Entity\Provider[] $providers
  * @property \App\Model\Entity\Transaction[] $transactions
  */
 class User extends Entity
@@ -67,6 +66,7 @@ class User extends Entity
         'city' => true,
         'address' => true,
         'token' => true,
+        'remember_token' => true,
         'tfa_enabled' => true,
         'tfa_code' => true,
         'removed' => true,
@@ -82,9 +82,7 @@ class User extends Entity
         'role' => true,
         'admins' => true,
         'orders' => true,
-        'payhomes' => true,
         'products' => true,
-        'providers' => true,
         'transactions' => true,
     ];
 

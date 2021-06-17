@@ -1,2 +1,5 @@
+<?php
 
-<?= $this->element('Partials/_nav') ?>
+echo $this->element('Partials/_nav');
+
+?>

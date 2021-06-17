@@ -37,8 +37,6 @@
                 <th scope="col"><?= __('Last Name') ?></th>
                 <th scope="col"><?= __('Email') ?></th>
                 <th scope="col"><?= __('Phone') ?></th>
-                <th scope="col"><?= __('Contact Topic Id') ?></th>
-                <th scope="col"><?= __('Message') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -49,8 +47,6 @@
                 <td><?= h($contacts->last_name) ?></td>
                 <td><?= h($contacts->email) ?></td>
                 <td><?= h($contacts->phone) ?></td>
-                <td><?= h($contacts->contact_topic_id) ?></td>
-                <td><?= h($contacts->message) ?></td>
                 <td><?= h($contacts->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Contacts', 'action' => 'view', $contacts->id]) ?>

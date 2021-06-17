@@ -30,7 +30,7 @@
             <?php foreach ($productsUsers as $productsUser): ?>
             <tr>
                 <td><?= $this->Number->format($productsUser->id) ?></td>
-                <td><?= $productsUser->has('user') ? $this->Html->link($productsUser->user->id, ['controller' => 'Users', 'action' => 'view', $productsUser->user->id]) : '' ?></td>
+                <td><?= $productsUser->has('user') ? $this->Html->link($productsUser->user->full_name, ['controller' => 'Users', 'action' => 'view', $productsUser->user->id]) : '' ?></td>
                 <td><?= $productsUser->has('product') ? $this->Html->link($productsUser->product->name, ['controller' => 'Products', 'action' => 'view', $productsUser->product->id]) : '' ?></td>
                 <td><?= h($productsUser->created) ?></td>
                 <td class="actions">

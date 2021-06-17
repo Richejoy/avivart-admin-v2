@@ -1,36 +1,40 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Admin[]|\Cake\Collection\CollectionInterface $admins
+ * @var \App\Model\Entity\Member[]|\Cake\Collection\CollectionInterface $members
  */
 ?>
 <nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Admin'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New Member'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="admins index large-10 medium-10 columns content">
-    <h3><?= __('Admins') ?></h3>
+<div class="members index large-10 medium-10 columns content">
+    <h3><?= __('Members') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($admins as $admin): ?>
+            <?php foreach ($members as $member): ?>
             <tr>
-                <td><?= $this->Number->format($admin->id) ?></td>
-                <td><?= $admin->has('user') ? $this->Html->link($admin->user->full_name, ['controller' => 'Users', 'action' => 'view', $admin->user->id]) : '' ?></td>
+                <td><?= $this->Number->format($member->id) ?></td>
+                <td><?= $member->has('user') ? $this->Html->link($member->user->full_name, ['controller' => 'Users', 'action' => 'view', $member->user->id]) : '' ?></td>
+                <td><?= h($member->created) ?></td>
+                <td><?= h($member->modified) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $admin->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $admin->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $admin->id], ['confirm' => __('Are you sure you want to delete # {0}?', $admin->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $member->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $member->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $member->id], ['confirm' => __('Are you sure you want to delete # {0}?', $member->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -21,15 +21,5 @@
     </ul>
 </nav>
 <div class="images form large-10 medium-10 columns content">
-    <?= $this->Form->create($image) ?>
-    <fieldset>
-        <legend><?= __('Add Image') ?></legend>
-        <?php
-            echo $this->Form->control('folder');
-            echo $this->Form->control('url');
-            echo $this->Form->control('link');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+    <h5><?= __('Unavailable') ?></h5>
 </div>

@@ -41,10 +41,6 @@
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('username') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('activated') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('can_login') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('city') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('image_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('country_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('civility_id') ?></th>
@@ -62,10 +58,6 @@
                 <td><?= h($user->email) ?></td>
                 <td><?= h($user->phone) ?></td>
                 <td><?= h($user->username) ?></td>
-                <td><?= h($user->activated) ?></td>
-                <td><?= h($user->can_login) ?></td>
-                <td><?= h($user->city) ?></td>
-                <td><?= h($user->address) ?></td>
                 <td><?= $user->has('image') ? $this->Html->link($user->image->id, ['controller' => 'Images', 'action' => 'view', $user->image->id]) : '' ?></td>
                 <td><?= $user->has('country') ? $this->Html->link($user->country->name, ['controller' => 'Countries', 'action' => 'view', $user->country->id]) : '' ?></td>
                 <td><?= $user->has('civility') ? $this->Html->link($user->civility->name, ['controller' => 'Civilities', 'action' => 'view', $user->civility->id]) : '' ?></td>

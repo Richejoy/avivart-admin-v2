@@ -20,7 +20,6 @@
                 <th scope="col"><?= $this->Paginator->sort('last_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('phone') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('token') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -34,7 +33,6 @@
                 <td><?= h($newsletter->last_name) ?></td>
                 <td><?= h($newsletter->email) ?></td>
                 <td><?= h($newsletter->phone) ?></td>
-                <td><?= h($newsletter->token) ?></td>
                 <td><?= h($newsletter->created) ?></td>
                 <td><?= h($newsletter->modified) ?></td>
                 <td class="actions">

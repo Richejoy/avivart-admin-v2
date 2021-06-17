@@ -32,7 +32,7 @@
                 <td><?= $this->Number->format($transaction->id) ?></td>
                 <td><?= h($transaction->created) ?></td>
                 <td><?= $transaction->has('transaction_type') ? $this->Html->link($transaction->transaction_type->name, ['controller' => 'TransactionTypes', 'action' => 'view', $transaction->transaction_type->id]) : '' ?></td>
-                <td><?= $transaction->has('user') ? $this->Html->link($transaction->user->id, ['controller' => 'Users', 'action' => 'view', $transaction->user->id]) : '' ?></td>
+                <td><?= $transaction->has('user') ? $this->Html->link($transaction->user->full_name, ['controller' => 'Users', 'action' => 'view', $transaction->user->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $transaction->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $transaction->id]) ?>

@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Order[]|\Cake\Collection\CollectionInterface $orders
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Order'), ['action' => 'add']) ?></li>
@@ -22,7 +22,7 @@
         <li><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="orders index large-9 medium-8 columns content">
+<div class="orders index large-10 medium-10 columns content">
     <h3><?= __('Orders') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -48,7 +48,7 @@
                 <td><?= h($order->delivery_address) ?></td>
                 <td><?= h($order->delivery_date) ?></td>
                 <td><?= h($order->paid) ?></td>
-                <td><?= $order->has('user') ? $this->Html->link($order->user->id, ['controller' => 'Users', 'action' => 'view', $order->user->id]) : '' ?></td>
+                <td><?= $order->has('user') ? $this->Html->link($order->user->full_name, ['controller' => 'Users', 'action' => 'view', $order->user->id]) : '' ?></td>
                 <td><?= $order->has('payment_mode') ? $this->Html->link($order->payment_mode->name, ['controller' => 'PaymentModes', 'action' => 'view', $order->payment_mode->id]) : '' ?></td>
                 <td><?= $order->has('coupon') ? $this->Html->link($order->coupon->name, ['controller' => 'Coupons', 'action' => 'view', $order->coupon->id]) : '' ?></td>
                 <td><?= $order->has('order_state') ? $this->Html->link($order->order_state->name, ['controller' => 'OrderStates', 'action' => 'view', $order->order_state->id]) : '' ?></td>

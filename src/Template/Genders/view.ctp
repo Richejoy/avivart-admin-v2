@@ -34,14 +34,12 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
-                <th scope="col"><?= __('Gender Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($gender->civilities as $civilities): ?>
             <tr>
                 <td><?= h($civilities->id) ?></td>
                 <td><?= h($civilities->name) ?></td>
-                <td><?= h($civilities->gender_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Civilities', 'action' => 'view', $civilities->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Civilities', 'action' => 'edit', $civilities->id]) ?>

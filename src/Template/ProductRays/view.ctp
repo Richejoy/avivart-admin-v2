@@ -40,16 +40,12 @@
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Name') ?></th>
-                <th scope="col"><?= __('Image Id') ?></th>
-                <th scope="col"><?= __('Product Ray Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($productRay->product_categories as $productCategories): ?>
             <tr>
                 <td><?= h($productCategories->id) ?></td>
                 <td><?= h($productCategories->name) ?></td>
-                <td><?= h($productCategories->image_id) ?></td>
-                <td><?= h($productCategories->product_ray_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'ProductCategories', 'action' => 'view', $productCategories->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'ProductCategories', 'action' => 'edit', $productCategories->id]) ?>

@@ -36,10 +36,6 @@
                 <th scope="col"><?= __('Delivery Address') ?></th>
                 <th scope="col"><?= __('Delivery Date') ?></th>
                 <th scope="col"><?= __('Paid') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
-                <th scope="col"><?= __('Payment Mode Id') ?></th>
-                <th scope="col"><?= __('Coupon Id') ?></th>
-                <th scope="col"><?= __('Order State Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -50,10 +46,6 @@
                 <td><?= h($orders->delivery_address) ?></td>
                 <td><?= h($orders->delivery_date) ?></td>
                 <td><?= h($orders->paid) ?></td>
-                <td><?= h($orders->user_id) ?></td>
-                <td><?= h($orders->payment_mode_id) ?></td>
-                <td><?= h($orders->coupon_id) ?></td>
-                <td><?= h($orders->order_state_id) ?></td>
                 <td><?= h($orders->created) ?></td>
                 <td><?= h($orders->modified) ?></td>
                 <td class="actions">

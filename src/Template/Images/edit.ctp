@@ -31,11 +31,11 @@
     <fieldset>
         <legend><?= __('Edit Image') ?></legend>
         <?php
-            echo $this->Form->control('folder');
-            echo $this->Form->control('url');
+            echo $this->Form->control('folder', ['readonly' => true]);
+            echo $this->Form->control('url', ['readonly' => true]);
             echo $this->Form->control('link');
         ?>
+        <?= $this->Form->button(__('Submit')) ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

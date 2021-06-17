@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Order $order
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Order'), ['action' => 'edit', $order->id]) ?> </li>
@@ -25,7 +25,7 @@
         <li><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="orders view large-9 medium-8 columns content">
+<div class="orders view large-10 medium-10 columns content">
     <h3><?= h($order->id) ?></h3>
     <table class="vertical-table">
         <tr>
@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('User') ?></th>
-            <td><?= $order->has('user') ? $this->Html->link($order->user->id, ['controller' => 'Users', 'action' => 'view', $order->user->id]) : '' ?></td>
+            <td><?= $order->has('user') ? $this->Html->link($order->user->full_name, ['controller' => 'Users', 'action' => 'view', $order->user->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Payment Mode') ?></th>
@@ -87,12 +87,6 @@
                 <th scope="col"><?= __('Quantity') ?></th>
                 <th scope="col"><?= __('On Discount') ?></th>
                 <th scope="col"><?= __('Published') ?></th>
-                <th scope="col"><?= __('Image Id') ?></th>
-                <th scope="col"><?= __('Product Category Id') ?></th>
-                <th scope="col"><?= __('Product Type Id') ?></th>
-                <th scope="col"><?= __('Currency Id') ?></th>
-                <th scope="col"><?= __('Conversion Id') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($order->products as $products): ?>
@@ -106,12 +100,6 @@
                 <td><?= h($products->quantity) ?></td>
                 <td><?= h($products->on_discount) ?></td>
                 <td><?= h($products->published) ?></td>
-                <td><?= h($products->image_id) ?></td>
-                <td><?= h($products->product_category_id) ?></td>
-                <td><?= h($products->product_type_id) ?></td>
-                <td><?= h($products->currency_id) ?></td>
-                <td><?= h($products->conversion_id) ?></td>
-                <td><?= h($products->user_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Products', 'action' => 'view', $products->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Products', 'action' => 'edit', $products->id]) ?>
@@ -135,7 +123,6 @@
                 <th scope="col"><?= __('Phone Number') ?></th>
                 <th scope="col"><?= __('Identifier') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
-                <th scope="col"><?= __('Order Id') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -149,7 +136,6 @@
                 <td><?= h($payments->phone_number) ?></td>
                 <td><?= h($payments->identifier) ?></td>
                 <td><?= h($payments->description) ?></td>
-                <td><?= h($payments->order_id) ?></td>
                 <td><?= h($payments->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Payments', 'action' => 'view', $payments->id]) ?>

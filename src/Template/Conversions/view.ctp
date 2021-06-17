@@ -44,12 +44,6 @@
                 <th scope="col"><?= __('Quantity') ?></th>
                 <th scope="col"><?= __('On Discount') ?></th>
                 <th scope="col"><?= __('Published') ?></th>
-                <th scope="col"><?= __('Image Id') ?></th>
-                <th scope="col"><?= __('Product Category Id') ?></th>
-                <th scope="col"><?= __('Product Type Id') ?></th>
-                <th scope="col"><?= __('Currency Id') ?></th>
-                <th scope="col"><?= __('Conversion Id') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($conversion->products as $products): ?>
@@ -62,12 +56,6 @@
                 <td><?= h($products->quantity) ?></td>
                 <td><?= h($products->on_discount) ?></td>
                 <td><?= h($products->published) ?></td>
-                <td><?= h($products->image_id) ?></td>
-                <td><?= h($products->product_category_id) ?></td>
-                <td><?= h($products->product_type_id) ?></td>
-                <td><?= h($products->currency_id) ?></td>
-                <td><?= h($products->conversion_id) ?></td>
-                <td><?= h($products->user_id) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Products', 'action' => 'view', $products->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Products', 'action' => 'edit', $products->id]) ?>

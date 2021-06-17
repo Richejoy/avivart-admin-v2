@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Order $order
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="large-2 medium-2 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(
@@ -28,7 +28,7 @@
         <li><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="orders form large-9 medium-8 columns content">
+<div class="orders form large-10 medium-10 columns content">
     <?= $this->Form->create($order) ?>
     <fieldset>
         <legend><?= __('Edit Order') ?></legend>
@@ -41,9 +41,8 @@
             echo $this->Form->control('coupon_id', ['options' => $coupons, 'empty' => true]);
             echo $this->Form->control('order_state_id', ['options' => $orderStates]);
             echo $this->Form->control('amount');
-            echo $this->Form->control('products._ids', ['options' => $products]);
+            echo $this->Form->button(__('Submit'));
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>

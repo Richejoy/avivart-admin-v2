@@ -50,7 +50,7 @@
             echo $this->Form->control('user_type_id', ['options' => $userTypes]);
             echo $this->Form->control('role_id', ['options' => $roles]);
         ?>
-        <?= $this->Form->button(__('Submit')) ?>
     </fieldset>
+    <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
