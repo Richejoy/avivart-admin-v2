@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  * @property string $folder
  * @property string|null $url
  * @property string|null $link
+ * @property string|null $description
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
@@ -17,6 +18,10 @@ use Cake\ORM\Entity;
  * @property \App\Model\Entity\ProductRay[] $product_rays
  * @property \App\Model\Entity\ProductType[] $product_types
  * @property \App\Model\Entity\Product[] $products
+ * @property \App\Model\Entity\AdCategory[] $ad_categories
+ * @property \App\Model\Entity\AdRay[] $ad_rays
+ * @property \App\Model\Entity\AdType[] $ad_types
+ * @property \App\Model\Entity\Ad[] $ads
  * @property \App\Model\Entity\User[] $users
  */
 class Image extends Entity
@@ -34,12 +39,17 @@ class Image extends Entity
         'folder' => true,
         'url' => true,
         'link' => true,
+        'description' => true,
         'created' => true,
         'modified' => true,
         'product_categories' => true,
         'product_rays' => true,
         'product_types' => true,
         'products' => true,
+        'ad_categories' => true,
+        'ad_rays' => true,
+        'ad_types' => true,
+        'ads' => true,
         'users' => true,
     ];
 }

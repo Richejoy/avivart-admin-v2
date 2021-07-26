@@ -13,6 +13,10 @@ use Cake\Validation\Validator;
  * @property \App\Model\Table\ProductRaysTable&\Cake\ORM\Association\HasMany $ProductRays
  * @property \App\Model\Table\ProductTypesTable&\Cake\ORM\Association\HasMany $ProductTypes
  * @property \App\Model\Table\ProductsTable&\Cake\ORM\Association\HasMany $Products
+ * @property \App\Model\Table\AdCategoriesTable&\Cake\ORM\Association\HasMany $AdCategories
+ * @property \App\Model\Table\AdRaysTable&\Cake\ORM\Association\HasMany $AdRays
+ * @property \App\Model\Table\AdTypesTable&\Cake\ORM\Association\HasMany $AdTypes
+ * @property \App\Model\Table\AdsTable&\Cake\ORM\Association\HasMany $Ads
  * @property \App\Model\Table\UsersTable&\Cake\ORM\Association\HasMany $Users
  *
  * @method \App\Model\Entity\Image get($primaryKey, $options = [])
@@ -54,6 +58,18 @@ class ImagesTable extends Table
             'foreignKey' => 'image_id',
         ]);
         $this->hasMany('Products', [
+            'foreignKey' => 'image_id',
+        ]);
+        $this->hasMany('AdCategories', [
+            'foreignKey' => 'image_id',
+        ]);
+        $this->hasMany('AdRays', [
+            'foreignKey' => 'image_id',
+        ]);
+        $this->hasMany('AdTypes', [
+            'foreignKey' => 'image_id',
+        ]);
+        $this->hasMany('Ads', [
             'foreignKey' => 'image_id',
         ]);
         $this->hasMany('Users', [

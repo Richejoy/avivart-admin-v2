@@ -28,7 +28,6 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('folder') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('url') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('link') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -40,7 +39,6 @@
                 <td><?= $this->Number->format($image->id) ?></td>
                 <td><?= h($image->folder) ?></td>
                 <td><?= h($image->url) ?></td>
-                <td><?= h($image->link) ?></td>
                 <td><?= h($image->created) ?></td>
                 <td><?= h($image->modified) ?></td>
                 <td class="actions">

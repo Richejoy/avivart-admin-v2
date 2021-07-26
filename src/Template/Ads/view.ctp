@@ -56,7 +56,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Image Id') ?></th>
-            <td><?= $this->Number->format($ad->image_id) ?></td>
+            <td><?= $this->Html->link($ad->image_id, ['controller' => 'Images', 'action' => 'view', $ad->image_id]) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('User Id') ?></th>

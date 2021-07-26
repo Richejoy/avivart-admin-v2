@@ -21,13 +21,5 @@
     </ul>
 </nav>
 <div class="adsUsers form large-10 medium-10 columns content">
-    <?= $this->Form->create($adsUser) ?>
-    <fieldset>
-        <legend><?= __('Edit Ads User') ?></legend>
-        <?php
-            echo $this->Form->control('id');
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+    <h5><?= __('Unavailable') ?></h5>
 </div>

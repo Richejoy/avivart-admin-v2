@@ -50,7 +50,7 @@
                 <td><?= h($ad->is_vip) ?></td>
                 <td><?= h($ad->published) ?></td>
                 <td><?= h($ad->expire_date) ?></td>
-                <td><?= $this->Number->format($ad->image_id) ?></td>
+                <td><?= $this->Html->link($ad->image_id, ['controller' => 'Images', 'action' => 'view', $ad->image_id]) ?></td>
                 <td><?= $ad->has('ad_category') ? $this->Html->link($ad->ad_category->name, ['controller' => 'AdCategories', 'action' => 'view', $ad->ad_category->id]) : '' ?></td>
                 <td><?= $ad->has('ad_type') ? $this->Html->link($ad->ad_type->name, ['controller' => 'AdTypes', 'action' => 'view', $ad->ad_type->id]) : '' ?></td>
                 <td><?= $ad->has('currency') ? $this->Html->link($ad->currency->name, ['controller' => 'Currencies', 'action' => 'view', $ad->currency->id]) : '' ?></td>
