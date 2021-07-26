@@ -21,6 +21,7 @@ class AdCategoriesController extends AppController
     {
         $this->paginate = [
             'contain' => ['Images', 'AdRays'],
+            'order' => ['AdCategories.id' => 'ASC']
         ];
         $adCategories = $this->paginate($this->AdCategories);
 
@@ -52,7 +53,18 @@ class AdCategoriesController extends AppController
     {
         $adCategory = $this->AdCategories->newEntity();
         if ($this->request->is('post')) {
+
             $adCategory = $this->AdCategories->patchEntity($adCategory, $this->request->getData());
+
+            $adCategory->image = $this->AdCategories->Images->patchEntity(
+                $this->AdCategories->Images->newEntity(),
+                [
+                    'folder' => 'ad_categories',
+                    'url' => 'default.jpg',
+                    'link' => self::IMG_PROD_URL . 'ad_categories/default.jpg'
+                ]
+            );
+
             if ($this->AdCategories->save($adCategory)) {
                 $this->Flash->success(__('The ad category has been saved.'));
 

@@ -21,6 +21,7 @@ class AdTypesController extends AppController
     {
         $this->paginate = [
             'contain' => ['Images'],
+            'order' => ['AdTypes.id' => 'ASC']
         ];
         $adTypes = $this->paginate($this->AdTypes);
 
@@ -52,7 +53,18 @@ class AdTypesController extends AppController
     {
         $adType = $this->AdTypes->newEntity();
         if ($this->request->is('post')) {
+
             $adType = $this->AdTypes->patchEntity($adType, $this->request->getData());
+
+            $adType->image = $this->AdTypes->Images->patchEntity(
+                $this->AdTypes->Images->newEntity(),
+                [
+                    'folder' => 'ad_types',
+                    'url' => 'default.jpg',
+                    'link' => self::IMG_PROD_URL . 'ad_types/default.jpg'
+                ]
+            );
+
             if ($this->AdTypes->save($adType)) {
                 $this->Flash->success(__('The ad type has been saved.'));
 

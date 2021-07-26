@@ -21,6 +21,7 @@ class AdRaysController extends AppController
     {
         $this->paginate = [
             'contain' => ['Images'],
+            'order' => ['AdRays.id' => 'ASC']
         ];
         $adRays = $this->paginate($this->AdRays);
 
@@ -52,7 +53,18 @@ class AdRaysController extends AppController
     {
         $adRay = $this->AdRays->newEntity();
         if ($this->request->is('post')) {
+
             $adRay = $this->AdRays->patchEntity($adRay, $this->request->getData());
+
+            $adRay->image = $this->AdRays->Images->patchEntity(
+                $this->AdRays->Images->newEntity(),
+                [
+                    'folder' => 'ad_rays',
+                    'url' => 'default.jpg',
+                    'link' => self::IMG_PROD_URL . 'ad_rays/default.jpg'
+                ]
+            );
+
             if ($this->AdRays->save($adRay)) {
                 $this->Flash->success(__('The ad ray has been saved.'));
 

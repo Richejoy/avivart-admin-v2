@@ -22,7 +22,6 @@
         <legend><?= __('Add Ad Category') ?></legend>
         <?php
             echo $this->Form->control('name');
-            echo $this->Form->control('image_id', ['options' => $images]);
             echo $this->Form->control('ad_ray_id', ['options' => $adRays]);
         ?>
     </fieldset>

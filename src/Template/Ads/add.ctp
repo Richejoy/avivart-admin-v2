@@ -32,13 +32,9 @@
             echo $this->Form->control('is_vip');
             echo $this->Form->control('published');
             echo $this->Form->control('expire_date');
-            echo $this->Form->control('image_id');
             echo $this->Form->control('ad_category_id', ['options' => $adCategories]);
             echo $this->Form->control('ad_type_id', ['options' => $adTypes]);
             echo $this->Form->control('currency_id', ['options' => $currencies]);
-            echo $this->Form->control('user_id');
-            echo $this->Form->control('images._ids', ['options' => $images]);
-            echo $this->Form->control('users._ids', ['options' => $users]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

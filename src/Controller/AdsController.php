@@ -21,6 +21,7 @@ class AdsController extends AppController
     {
         $this->paginate = [
             'contain' => ['AdCategories', 'AdTypes', 'Currencies'],
+            'order' => ['Ads.id' => 'ASC']
         ];
         $ads = $this->paginate($this->Ads);
 
@@ -52,7 +53,20 @@ class AdsController extends AppController
     {
         $ad = $this->Ads->newEntity();
         if ($this->request->is('post')) {
+
             $ad = $this->Ads->patchEntity($ad, $this->request->getData());
+
+            $ad->user_id = $this->Auth->user('id');
+
+            $ad->image = $this->Ads->Images->patchEntity(
+                $this->Ads->Images->newEntity(),
+                [
+                    'folder' => 'ads',
+                    'url' => 'default.jpg',
+                    'link' => self::IMG_PROD_URL . 'ads/default.jpg'
+                ]
+            );
+
             if ($this->Ads->save($ad)) {
                 $this->Flash->success(__('The ad has been saved.'));
 

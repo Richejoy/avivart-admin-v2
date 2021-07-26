@@ -26,7 +26,6 @@
         <legend><?= __('Edit Ad Ray') ?></legend>
         <?php
             echo $this->Form->control('name');
-            echo $this->Form->control('image_id', ['options' => $images]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
