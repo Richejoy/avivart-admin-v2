@@ -26,9 +26,14 @@
         <li class="divider"></li>
 
         <li><?= $this->Html->link(__('List Order States'), ['controller' => 'OrderStates', 'action' => 'index']) ?></li>
+        
         <li><?= $this->Html->link(__('List Product Types'), ['controller' => 'ProductTypes', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Product Rays'), ['controller' => 'ProductRays', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Product Categories'), ['controller' => 'ProductCategories', 'action' => 'index']) ?></li>
+
+        <li><?= $this->Html->link(__('List Ad Types'), ['controller' => 'AdTypes', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Ad Rays'), ['controller' => 'AdRays', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Ad Categories'), ['controller' => 'AdCategories', 'action' => 'index']) ?></li>
 
         <li class="divider"></li>
 
@@ -54,6 +59,11 @@
         <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Products Orders'), ['controller' => 'ProductsOrders', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Products Users'), ['controller' => 'ProductsUsers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Products Images'), ['controller' => 'ProductsImages', 'action' => 'index']) ?></li>
+
+        <li><?= $this->Html->link(__('List Ads'), ['controller' => 'Ads', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Ads Users'), ['controller' => 'AdsUsers', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Ads Images'), ['controller' => 'AdsImages', 'action' => 'index']) ?></li>
 
         <li class="divider"></li>
 
