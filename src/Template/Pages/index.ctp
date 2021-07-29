@@ -22,6 +22,7 @@
         <li><?= $this->Html->link(__('List Roles'), ['controller' => 'Roles', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Conversions'), ['controller' => 'Conversions', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Coupons'), ['controller' => 'Coupons', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Formulas'), ['controller' => 'Formulas', 'action' => 'index']) ?></li>
 
         <li class="divider"></li>
 
@@ -70,6 +71,7 @@
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Admins'), ['controller' => 'Admins', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Members'), ['controller' => 'Members', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Ad Formulas'), ['controller' => 'AdFormulas', 'action' => 'index']) ?></li>
       </ul>
 
     </li>
