@@ -10,11 +10,11 @@ body.login-body {
 }
 
 body.login-body .section-left {
-    margin-top: 25vh;
+    margin-top: 12.5vh;
 }
 
 body.login-body .section-right {
-    margin-top: 25vh;
+    margin-top: 12.5vh;
 }
 
 table tr:nth-child(even) {

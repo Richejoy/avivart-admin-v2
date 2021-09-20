@@ -25,8 +25,9 @@
 </nav>
 <div class="images view large-10 medium-10 columns content">
     <h3><?= h($image->id) ?></h3>
+    
     <p>
-        <img src="<?= h($image->link) ?>" alt="<?= h($image->description) ?>">
+        <?= $this->Html->image($image->link, ['alt' => $image->url, 'width' => '300', 'height' => 300]) ?>
     </p>
 
     <table class="vertical-table">

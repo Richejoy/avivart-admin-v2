@@ -27,15 +27,42 @@
     </ul>
 </nav>
 <div class="images form large-10 medium-10 columns content">
-    <?= $this->Form->create($image) ?>
-    <fieldset>
-        <legend><?= __('Edit Image') ?></legend>
-        <?php
-            echo $this->Form->control('folder', ['readonly' => true]);
-            echo $this->Form->control('url', ['readonly' => true]);
-            echo $this->Form->control('link');
-        ?>
-        <?= $this->Form->button(__('Submit')) ?>
-    </fieldset>
-    <?= $this->Form->end() ?>
+    
+    <ul class="tabs" data-tab role="tablist">
+        <li class="tab-title active" role="presentation"><a href="#panel2-1" role="tab" tabindex="0"
+                aria-selected="true" aria-controls="panel2-1">En local</a></li>
+        <li class="tab-title" role="presentation"><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false"
+                aria-controls="panel2-2">En ligne</a></li>
+    </ul>
+    <div class="tabs-content">
+        <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+            <?= $this->Form->create($image, ['type' => 'file']) ?>
+            <fieldset>
+                <legend><?= __('Edit Image') ?></legend>
+                <?php
+                echo $this->Form->hidden('form', ['value' => 'local']);
+                echo $this->Form->control('image', ['type' => 'file', 'accept' => 'image/*', 'label' => 'Veuillez choisir une image', 'required' => true]);
+                ?>
+                <?= $this->Form->button(__('Submit')) ?>
+            </fieldset>
+            <?= $this->Form->end() ?>
+        </section>
+        <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+            <?= $this->Form->create($image) ?>
+            <fieldset>
+                <legend><?= __('Edit Image') ?></legend>
+                <?php
+                echo $this->Form->hidden('form', ['value' => 'online']);
+                echo $this->Form->control('link');
+                ?>
+                <?= $this->Form->button(__('Submit')) ?>
+            </fieldset>
+            <?= $this->Form->end() ?>
+        </section>
+    </div>
+
+    <p>
+        <?= $this->Html->image($image->link, ['alt' => $image->url, 'width' => '300', 'height' => 300]) ?>
+    </p>
+    
 </div>

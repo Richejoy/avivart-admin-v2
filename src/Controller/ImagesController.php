@@ -73,7 +73,37 @@ class ImagesController extends AppController
             'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
+
+            switch ($this->request->getData('form')) {
+                case 'local':
+                    $imageArray = $this->request->getData('image');
+
+                    //$size = $imageArray['size'];
+                    //type = $imageArray['type'];
+
+                    if (!empty($imageArray['name']) && ($imageArray['error'] == 0)) {
+
+                        $uploadUrl = (getEnv('DEBUG') == 'true') ? getEnv('LOCAL_UPLOAD_URL') : getEnv('PROD_UPLOAD_URL');
+
+                        $fileName = $imageArray['name'];
+                        $uploadPath = 'img/uploads/';
+                        $uploadFile = $uploadPath . $fileName;
+
+                        if (move_uploaded_file($imageArray['tmp_name'], $uploadFile)) {
+                            $this->request->data['url'] = $fileName;
+                            $this->request->data['link'] = $uploadUrl . $uploadPath . $fileName;
+                        }
+                    }
+                    break;
+
+                case 'online':
+                    break;
+
+                default:
+            }
+
             $image = $this->Images->patchEntity($image, $this->request->getData());
+
             if ($this->Images->save($image)) {
                 $this->Flash->success(__('The image has been saved.'));
 
