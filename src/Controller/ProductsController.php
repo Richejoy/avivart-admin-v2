@@ -38,7 +38,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Images', 'ProductCategories', 'ProductTypes', 'Currencies', 'Conversions', 'Users', 'Orders'],
+            'contain' => ['Images', 'ProductCategories', 'ProductTypes', 'Currencies', 'Conversions'],
         ]);
 
         $this->set('product', $product);
@@ -94,7 +94,7 @@ class ProductsController extends AppController
     public function edit($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Users', 'Orders'],
+            'contain' => [],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $product = $this->Products->patchEntity($product, $this->request->getData());

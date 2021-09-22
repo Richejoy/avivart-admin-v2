@@ -67,7 +67,7 @@ class ProductsTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER',
         ]);
-        $this->belongsToMany('Orders', [
+        /*$this->belongsToMany('Orders', [
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'order_id',
             'joinTable' => 'products_orders',
@@ -76,7 +76,7 @@ class ProductsTable extends Table
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'user_id',
             'joinTable' => 'products_users',
-        ]);
+        ]);*/
     }
 
     /**

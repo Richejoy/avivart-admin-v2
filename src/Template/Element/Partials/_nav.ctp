@@ -37,14 +37,22 @@
                     <li class="has-dropdown">
                         <a href="#"><?= __('Sub Item 2') ?></a>
                         <ul class="dropdown">
-                            <li><?= $this->Html->link(__('List Order States'), ['controller' => 'OrderStates', 'action' => 'index']) ?></li>
                             <li><?= $this->Html->link(__('List Product Types'), ['controller' => 'ProductTypes', 'action' => 'index']) ?></li>
                             <li><?= $this->Html->link(__('List Product Rays'), ['controller' => 'ProductRays', 'action' => 'index']) ?></li>
                             <li><?= $this->Html->link(__('List Product Categories'), ['controller' => 'ProductCategories', 'action' => 'index']) ?></li>
 
+                            <li><?= $this->Html->link(__('List Article Types'), ['controller' => 'ArticleTypes', 'action' => 'index']) ?></li>
+                            <li><?= $this->Html->link(__('List Article Rays'), ['controller' => 'ArticleRays', 'action' => 'index']) ?></li>
+                            <li><?= $this->Html->link(__('List Article Categories'), ['controller' => 'ArticleCategories', 'action' => 'index']) ?></li>
+
                             <li><?= $this->Html->link(__('List Ad Types'), ['controller' => 'AdTypes', 'action' => 'index']) ?></li>
                             <li><?= $this->Html->link(__('List Ad Rays'), ['controller' => 'AdRays', 'action' => 'index']) ?></li>
                             <li><?= $this->Html->link(__('List Ad Categories'), ['controller' => 'AdCategories', 'action' => 'index']) ?></li>
+                            <li><?= $this->Html->link(__('List Communication Categories'), ['controller' => 'CommunicationCategories', 'action' => 'index']) ?></li>
+
+                            <li class="divider"></li>
+
+                            <li><?= $this->Html->link(__('List Order States'), ['controller' => 'OrderStates', 'action' => 'index']) ?></li>
                         </ul>
                     </li>
 
@@ -69,14 +77,23 @@
                     <li class="divider"></li>
 
                     <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index']) ?></li>
-                    <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('List Products Orders'), ['controller' => 'ProductsOrders', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('List Products Users'), ['controller' => 'ProductsUsers', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('List Products Images'), ['controller' => 'ProductsImages', 'action' => 'index']) ?></li>
 
+                    <li><?= $this->Html->link(__('List Articles'), ['controller' => 'Articles', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('List Articles Orders'), ['controller' => 'ArticlesOrders', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('List Articles Users'), ['controller' => 'ArticlesUsers', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('List Articles Images'), ['controller' => 'ArticlesImages', 'action' => 'index']) ?></li>
+
                     <li><?= $this->Html->link(__('List Ads'), ['controller' => 'Ads', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('List Ads Users'), ['controller' => 'AdsUsers', 'action' => 'index']) ?></li>
                     <li><?= $this->Html->link(__('List Ads Images'), ['controller' => 'AdsImages', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('List Communications'), ['controller' => 'Communications', 'action' => 'index']) ?></li>
+
+                    <li class="divider"></li>
+
+                    <li><?= $this->Html->link(__('List Orders'), ['controller' => 'Orders', 'action' => 'index']) ?></li>
 
                     <li class="divider"></li>
 

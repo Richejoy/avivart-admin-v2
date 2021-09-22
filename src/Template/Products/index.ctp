@@ -41,6 +41,8 @@
                 <th scope="col"><?= $this->Paginator->sort('product_type_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('currency_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('conversion_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -59,6 +61,8 @@
                 <td><?= $product->has('product_type') ? $this->Html->link($product->product_type->name, ['controller' => 'ProductTypes', 'action' => 'view', $product->product_type->id]) : '' ?></td>
                 <td><?= $product->has('currency') ? $this->Html->link($product->currency->name, ['controller' => 'Currencies', 'action' => 'view', $product->currency->id]) : '' ?></td>
                 <td><?= $product->has('conversion') ? $this->Html->link($product->conversion->name, ['controller' => 'Conversions', 'action' => 'view', $product->conversion->id]) : '' ?></td>
+                <td><?= h($product->created) ?></td>
+                <td><?= h($product->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>

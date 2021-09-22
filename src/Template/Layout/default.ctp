@@ -1,4 +1,6 @@
-<?= $this->Html->docType() ?>
+<?php
+echo $this->Html->docType();
+?>
 
 <!--[if IE 9]><html class="lt-ie10" lang="<?= mb_substr($this->getRequest()->getSession()->read('locale'), 0, 2) ?>" > <![endif]-->
 <html class="no-js" lang="<?= mb_substr($this->getRequest()->getSession()->read('locale'), 0, 2) ?>">
@@ -53,7 +55,29 @@
     <?= $this->Html->script('vendor/jquery') ?>
     <?= $this->Html->script('foundation.min') ?>
     <?= $this->Html->script('jQuery.resizableColumns.min') ?>
+
+    <?= $this->Html->script('plugins/emojione/lib/js/emojione') ?>
+    <script src="//cdn.ckeditor.com/4.16.2/basic/ckeditor.js" defer></script>
+    
+    <?php $this->Html->script('plugins/ckeditor/ckeditor'); ?>
+    <!--
+    <script src="//cdn.ckeditor.com/4.16.2/standard/ckeditor.js" defer></script>
+    <script src="//cdn.ckeditor.com/4.16.2/basic/ckeditor.js" defer></script>
+    <script src="//cdn.ckeditor.com/4.16.2/full/ckeditor.js" defer></script>
+    -->
+
     <?= $this->Html->script('avivart') ?>
     <?= $this->fetch('script') ?>
+
+    <script>
+        //CKEDITOR.plugins.addExternal('emojione', "https://avivart.net/admin/js/plugins/ckeditor-emojione/", 'plugin.js');
+        
+        CKEDITOR.replace('#content', {
+            language: 'fr',
+            //uiColor: '#428BCA',
+            toolbarLocation: 'bottom',
+            //extraPlugins: 'emojione'
+        });
+    </script>
 </body>
 </html>
